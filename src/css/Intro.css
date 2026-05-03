@@ -1,0 +1,105 @@
+.Intro {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-bg);
+}
+
+/* HEADER */
+.Intro .IntroHeader {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  background-color: var(--color-nav-bg);
+  color: var(--color-text-main);
+  font-size: small;
+
+  border-bottom: solid 1px var(--color-text-main);
+}
+
+.IntroHeader .link {
+  text-decoration: none;
+  color: var(--color-nav-link);
+  padding: 5px 15px;
+}
+
+.IntroHeader .dominik-link {
+  margin-right: auto;
+  font-size: medium;
+}
+
+.IntroHeader .foto-link {
+  color: var(--color-text-main);
+}
+
+.IntroHeader .storia-btn {
+  background-color: var(--border-color);
+  color: var(--color-nav-link);
+  border-radius: 30px;
+}
+
+/* REST */
+.Intro .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 100px;
+  height: 75vh;
+}
+
+.Intro .text-wrapper h1, 
+.Intro .text-wrapper p {
+  color: var(--color-text-main);
+}
+
+.Intro .text-wrapper {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 50px;
+}
+
+.Intro .main .img-wrapper {
+  flex: 1 1 150px;
+  max-width: 350px;
+}
+
+.Intro .main img {
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
+}
+
+.Intro .entra-btn {
+  text-decoration: none;
+  background-color: var(--color-nav-bg);
+  color: var(--color-text-main);
+  width: 300px;
+  text-align: center;
+  border-radius: 30px;
+  border: solid 1px var(--color-text-main);
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.Intro .entra-btn:hover,
+.Intro .entra-btn:focus {
+  transform: translateX(1px) translateY(-1px);
+  /* x y blur colore */
+  box-shadow: -1px 1px 1px rgb(60, 60, 60);
+  transition: 0.2s linear;
+}
+
+.Intro .entra-btn:active {
+  transform: translateX(0) translateX(0);
+  box-shadow: none;
+}
+
+/* TODO: fade in della pagina quando si entra */
+/* TODO: modificare i colori delle pagine principali */

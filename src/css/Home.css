@@ -1,0 +1,63 @@
+.Home {
+  position: relative;
+  z-index: 20;
+}
+
+.Home section {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 150px;
+  row-gap: 50px;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 200px 0;
+  background-color: var(--color-bg-home);
+  scroll-snap-align: start;
+}
+
+.Home section:first-child {
+  border-top: solid var(--border-color);
+}
+
+.Home .robe-scritte {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.Home .console-e-canestri {
+  background-color: var(--color-text-main);
+  color: var(--color-bg-home);
+}
+
+.Home h2 {
+  margin: auto;
+}
+
+.Home figure {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.Home img,
+.Home video {
+  width: 100%;
+  height: auto;
+}
+
+.Home .cavaliere-oscuro-maionese ul {
+  margin: 0.5rem;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,221 @@
+.RaccoltaFoto {
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(192, 133, 82, 0.18), transparent 30%),
+    linear-gradient(180deg, var(--color-bg-home) 0%, var(--color-bg) 100%);
+}
+
+.RaccoltaFoto section {
+  position: relative;
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.RaccoltaFoto section:first-child {
+  border-top: 1px solid var(--border-color);
+}
+
+.RaccoltaFoto .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  margin-bottom: 1rem;
+  border-radius: var(--radius-pill);
+  background-color: rgba(192, 133, 82, 0.16);
+  color: var(--color-nav-link);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.raccolta-hero,
+.raccolta-slider-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.raccolta-copy h1,
+.raccolta-copy h2,
+.slider-copy h2,
+.section-heading h2 {
+  max-width: 12ch;
+}
+
+.raccolta-copy p,
+.slider-copy p,
+.photo-card-copy p {
+  font-size: 1.05rem;
+}
+
+.raccolta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.raccolta-tags span,
+.photo-label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-surface);
+  border: 1px solid rgba(192, 133, 82, 0.24);
+  color: var(--color-text-main);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hero-card,
+.slider-shell,
+.photo-card {
+  background-color: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(75, 46, 43, 0.08);
+  box-shadow: 0 20px 50px rgba(75, 46, 43, 0.08);
+}
+
+.hero-card {
+  padding: 1.1rem;
+  border-radius: calc(var(--radius-md) + 10px);
+  transform: rotate(1.5deg);
+}
+
+.hero-card img,
+.photo-card img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.hero-card img {
+  aspect-ratio: 4 / 4.2;
+}
+
+.raccolta-slider-section {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--color-text-main);
+  color: var(--color-bg-home);
+}
+
+.raccolta-slider-section .eyebrow {
+  background-color: rgba(255, 248, 240, 0.12);
+  color: var(--color-bg-home);
+}
+
+.slider-shell {
+  margin: 0 1rem;
+  padding: 1rem;
+  border-radius: calc(var(--radius-md) + 14px);
+  min-height: 560px;
+}
+
+.slider-shell .PhotoSlider {
+  height: 100%;
+}
+
+.slider-copy ul {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1.75rem;
+  padding-left: 1.2rem;
+}
+
+.raccolta-grid-section {
+  width: min(1180px, calc(100% - 2rem));
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2.2rem;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.photo-card {
+  overflow: hidden;
+  border-radius: calc(var(--radius-md) + 10px);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(75, 46, 43, 0.12);
+}
+
+.photo-card img {
+  aspect-ratio: 4 / 3;
+}
+
+.photo-card.is-wide {
+  grid-column: 1 / -1;
+}
+
+.photo-card.is-wide img {
+  aspect-ratio: 16 / 8;
+}
+
+.photo-card-copy {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.2rem;
+}
+
+@media (max-width: 960px) {
+  .raccolta-hero,
+  .raccolta-slider-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    transform: none;
+  }
+
+  .slider-shell {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 720px) {
+  .RaccoltaFoto section {
+    width: min(100%, calc(100% - 1.25rem));
+    padding: 3.5rem 0;
+  }
+
+  .raccolta-slider-section {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card.is-wide {
+    grid-column: auto;
+  }
+
+  .photo-card.is-wide img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .slider-shell {
+    min-height: 340px;
+  }
+}
