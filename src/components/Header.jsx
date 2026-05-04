@@ -1,5 +1,6 @@
 import '../css/Header.css';
 import { useScrollProgress } from '../hooks/useScrollFunctions';
+import { assetUrl } from '../utils/assetUrl';
 
 export default function Header() {
   let scrollProgress = useScrollProgress();
@@ -21,7 +22,7 @@ export default function Header() {
       </div>
 
       <figure>
-        <img height={"200px"} src="/dominik-maionese.JPG" alt="Foto di Dominik" />
+        <img height={"200px"} src={assetUrl("dominik-maionese.JPG")} alt="Foto di Dominik" />
         <figcaption>Una foto di Dominik insieme al suo cibo preferito: la maionese</figcaption>
       </figure>
     </div>

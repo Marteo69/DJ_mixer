@@ -1,6 +1,7 @@
 
 import FadeIn from "../components/FadeIn";
 import "../css/LaMiaStoria.css";
+import { assetUrl } from "../utils/assetUrl";
 
 const PILASTRI = [
   {
@@ -37,7 +38,7 @@ export default function LaMiaStoria() {
           </div>
 
           <figure className="storia-photo-card">
-            <img src="/foto-intro.png" alt="Ritratto di Dominik Wayer" />
+            <img src={assetUrl("foto-intro.png")} alt="Ritratto di Dominik Wayer" />
             <figcaption>
               Il lato composto di Dominik: quello che dura finche non parte la musica.
             </figcaption>
@@ -48,7 +49,7 @@ export default function LaMiaStoria() {
       <FadeIn>
         <section className="storia-split">
           <figure className="storia-photo-card">
-            <img src="/dj-magico.jpeg" alt="Dominik Wayer alla console" />
+            <img src={assetUrl("dj-magico.jpeg")} alt="Dominik Wayer alla console" />
             <figcaption>
               Tra console e luci basse, Dominik trova il suo secondo campo da gioco.
             </figcaption>
@@ -89,7 +90,7 @@ export default function LaMiaStoria() {
           </div>
 
           <figure className="storia-photo-card accent-card">
-            <img src="/dominik-maionese.JPG" alt="Dominik Wayer con la maionese" />
+            <img src={assetUrl("dominik-maionese.JPG")} alt="Dominik Wayer con la maionese" />
             <figcaption>
               Alcuni parlano di comfort food. Dominik preferisce parlare di identita.
             </figcaption>

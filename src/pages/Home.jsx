@@ -1,4 +1,5 @@
 import FadeIn from "../components/FadeIn"
+import { assetUrl } from "../utils/assetUrl";
 import "../css/Home.css"
 
 export default function Home() {  
@@ -25,13 +26,13 @@ export default function Home() {
             loop
             muted
           >
-            <source src="../../public/video-dominik-basket.mp4" type="video/mp4" />
+            <source src={assetUrl("video-dominik-basket.mp4")} type="video/mp4" />
             nigga hai un old ass browser che non supporta mp4
           </video>
           <figcaption>
             <a 
-              href="../../public/video-dominik-basket.mp4" 
-              download={"../../public/video-dominik-basket.mp4"}
+              href={assetUrl("video-dominik-basket.mp4")}
+              download={"video-dominik-basket.mp4"}
             >Video</a> di Dominik che gioca a Basket
           </figcaption>
         </figure>
@@ -41,7 +42,7 @@ export default function Home() {
       <FadeIn>
       <section className="console-e-canestri">
         <figure>
-          <img src="../../public/dj-magico.jpeg" alt="Dominik che lancia vinili da dj con maionese intorno" />
+          <img src={assetUrl("dj-magico.jpeg")} alt="Dominik che lancia vinili da dj con maionese intorno" />
         </figure>
         
         <div className="robe-scritte">

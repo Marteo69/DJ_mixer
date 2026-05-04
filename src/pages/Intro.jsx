@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import '../css/Intro.css';
 import FadeIn from "../components/FadeIn";
+import { assetUrl } from "../utils/assetUrl";
 
 export default function Intro() {
 
@@ -20,7 +21,7 @@ export default function Intro() {
           <Link to={"main-content/home"} className="entra-btn">Entra</Link>
         </div>
         <div className="img-wrapper">
-          <img src="../../public/foto-intro.png" alt="Foto di Dominik Wayer" />
+          <img src={assetUrl("foto-intro.png")} alt="Foto di Dominik Wayer" />
         </div>
       </div>
       </FadeIn>

@@ -1,31 +1,32 @@
 import FadeIn from "../components/FadeIn";
 import PhotoSlider from "../components/PhotoSlider";
 import "../css/RaccoltaFoto.css";
+import { assetUrl } from "../utils/assetUrl";
 
 const IMAGES = [
   {
     label: "Ritratto",
     desc: "Il ritratto ufficiale di Dominik, a meta tra eleganza e minaccia velata ai vinili.",
     alt: "Ritratto di Dominik Wayer in posa",
-    url: "/foto-intro.png"
+    url: assetUrl("foto-intro.png")
   },
   {
     label: "DJ set",
     desc: "Dominik alla console, nel momento esatto in cui il set comincia a diventare leggenda.",
     alt: "Dominik Wayer in versione DJ circondato da vinili",
-    url: "/dj-magico.jpeg"
+    url: assetUrl("dj-magico.jpeg")
   },
   {
     label: "Pausa tecnica",
     desc: "Una foto simbolo: Dominik, maionese e serenita interiore nello stesso fotogramma.",
     alt: "Dominik Wayer insieme alla maionese",
-    url: "/dominik-maionese.JPG"
+    url: assetUrl("dominik-maionese.JPG")
   },
   {
     label: "Mito locale",
     desc: "Il lato piu teatrale della storia: Dominik reinterpretato come leggenda urbana di Turriaco.",
     alt: "Illustrazione horror ispirata a Dominik Wayer",
-    url: "/horror-dominik.png"
+    url: assetUrl("horror-dominik.png")
   }
 ];
 
@@ -54,7 +55,7 @@ export default function RaccoltaFoto() {
           </div>
 
           <figure className="hero-card">
-            <img src="/foto-intro.png" alt="Ritratto di Dominik Wayer" />
+            <img src={assetUrl("foto-intro.png")} alt="Ritratto di Dominik Wayer" />
             <figcaption>
               Il ritratto che ha reso ufficiale la presenza scenica di Dominik.
             </figcaption>
